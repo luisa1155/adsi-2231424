@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>script js</title>
-</head>
-<body><h1>script js</h1><br><xmp><script type="text/javascript"></script></xmp>
-    
-</body>
+  </head>
+  <body>
+    <h1 id="username"></h1>
+
+    <script>
+      var suername = document.getElementById("username");
+      var question = prompt("cual es su nombre de usuario ?");
+      if (question) username.innerHTML = "Welcome: " + question;
+      else username.innerHTML = "Welcome: Guess";
+    </script>
+  </body>
 </html>
