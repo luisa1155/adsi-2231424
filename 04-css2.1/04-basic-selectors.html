@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic Selectors</title>
+    <style>
+      * {
+        border: 2px dotted coral;
+        margin: 10px;
+        padding: 10px;
+      }
+      h2 {
+        background-color: chartreuse;
+      }
+      p span {
+        background-color: deepskyblue;
+        margin: 0px;
+        padding: 0px;
+      }
+      .highlight {
+        background-color: lightgreen;
+      }
+      #elem03 {
+        background-color: crimson;
+        color: white;
+      }
+      div.box p.first {
+        background-color: black;
+        color: silver;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Basic Selectors</h1>
+    <h2>Universal Selector: *</h2>
+    <div>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse voluptates
+        voluptatem, at explicabo sunt sed ut nostrum eligendi incidunt corporis
+        neque voluptas, illum odit praesentium rerum accusamus quidem dolor
+        ipsum. Odit natus, ducimus nulla nesciunt quae quisquam, at optio
+        corporis ratione repudiandae assumenda possimus illo ad culpa! Illum, ea
+        corporis! Dolores quaerat repudiandae deserunt, velit eum cum molestias
+        soluta quibusdam! Dolorum, eaque accusantium quia voluptates aut nostrum
+        possimus, molestiae explicabo illum rem placeat? Eligendi voluptate
+        harum reiciendis unde, beatae nam tempora ullam porro? Error labore
+        eaque necessitatibus quidem dolorum quibusdam! Corrupti dolor cumque
+        consectetur pariatur, doloremque architecto cum omnis sequi! Culpa
+        architecto asperiores maxime beatae laboriosam dolor ipsum consequuntur
+        nihil ipsam eveniet sapiente voluptatibus optio, sed vitae fuga suscipit
+        quam! Inventore corrupti vero enim dolore nam voluptatem eligendi dicta
+        incidunt, qui sit? Culpa quos adipisci non laudantium incidunt obcaecati
+        distinctio. Eum omnis nesciunt numquam optio eligendi eos a tempore
+        odio.
+      </p>
+    </div>
+    <h2>Type/label Selector: h2</h2>
+    <h2>Descending Selector: p span</h2>
+    <div>
+      <p>
+        <span> Lorem ipsum dolor</span> sit amet consectetur adipisicing elit.
+        Esse voluptates voluptatem, at explicabo sunt sed ut nostrum eligendi
+        incidunt corporis neque voluptas, illum odit praesentium rerum accusamus
+        quidem dolor ipsum. Odit natus, ducimus nulla nesciunt quae quisquam, at
+        optio corporis ratione repudiandae assumenda possimus illo ad culpa!
+        Illum, ea corporis! Dolores quaerat repudiandae deserunt, velit eum cum
+        molestias soluta quibusdam! Dolorum, eaque accusantium quia voluptates
+        aut nostrum possimus, molestiae explicabo illum rem placeat? Eligendi
+        voluptate harum reiciendis unde, beatae nam tempora ullam porro?
+        <span> Error labore eaque </span>necessitatibus dolorum quibusdam!
+        Corrupti dolor cumque consectetur pariatur, doloremque architecto cum
+        omnis sequi! Culpa architecto asperiores maxime beatae laboriosam dolor
+        ipsum consequuntur nihil ipsam eveniet sapiente voluptatibus optio, sed
+        vitae fuga suscipit quam! Inventore corrupti vero enim dolore nam
+        voluptatem eligendi dicta incidunt, qui sit? Culpa quos adipisci non
+        laudantium incidunt obcaecati distinctio. Eum omnis nesciunt numquam
+        optio eligendi eos a tempore odio.
+      </p>
+    </div>
+    <h2 class="highlight">Class Selector: .highlight</h2>
+    <h2>ID Selector: #elem03</h2>
+    <ol>
+      <li id="elem01">Element 1</li>
+      <li id="elem02">Element 2</li>
+      <li id="elem03">Element 3</li>
+      <li id="elem04">Element 4</li>
+      <li id="elem05">Element 5</li>
+    </ol>
+    <h2>Combine Selector: div.box p.first</h2>
+    <div class="box">
+      <p class="first">lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+      <p>lorem</p>
+    </div>
+  </body>
+</html>
