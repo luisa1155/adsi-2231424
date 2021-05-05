@@ -9,428 +9,320 @@
             </meta>
         </meta>
         <style>
-            * {
-}
-body {
-    margin: 5px;
-    padding: 0;
-}
-main {
-    margin: 10px auto;
-    height: auto;
-    position: relative;
-    background-color: rgb(22, 160, 84);
-    font-family: Arial;
-}
-
-header div.Logo {
-    margin: 10px auto;
-    height: 190px;
-    width: 190px;
-    background-color: #07a314;
-    background-image: url("imgs/spriteweb.png");
-    background-position: -10px 800px;
-}
-
-header div.lista nav ul li {
-    margin: 10px auto;
-    width: 148px;
-    margin-right: 16px;
-    padding: 10px;
-    text-align: center;
-}
-header div.lista nav ul {
-    list-style: none;
-    text-align: center;
-}
-header div.lista nav ul li {
-    border-bottom: 2px solid #fff;
-    background-color: #014f23;
-    display: inline-block;
-}
-header div.lista nav ul li a:link, header div.lista nav ul li a:visited {
-    text-decoration: none;
-    color: #fff;
-    margin: 5px;
-    padding: 5px;
-    display: block;
-}
-header div.lista nav ul li:hover {
-    border-bottom: 2px solid #d3d609;
-    background-color: #013819;
-}
-
-div.imgsprite {
-    margin: 10px auto;
-    height: 230px auto;
-    width: 940px;
-    padding: 5px;
-    background-color: #014f23;
-    text-align: center;
-}
-div.imgsprite div.img1, div.img2, div.img3 {
-    border: 2px solid #fff;
-    margin: 10px auto;
-    height: 200px;
-    width: 290px;
-    display: inline-block;
-    background-image: url("imgs/spriteweb.png");
-    background-position: -1272px -7px;
-    border-radius: 3px
-}
-div.imgsprite div.img1 {
-    margin-right: 5px
-}
-div.imgsprite div.img2 {
-    margin-right: 5px;
-    margin-left: 5px;
-}
-div.imgsprite div.img3 {
-    margin-left: 5px
-}
-div.imgsprite div.img1 div, div.imgsprite div.img2 div, div.imgsprite div.img3 div {
-    background-color: rgba(255, 225, 225, 0.3);
-    height: 70px;
-    border-radius: 3px
-}
-div.imgsprite div.img1 div p, div.imgsprite div.img2 div p, div.imgsprite div.img3 div p {
-    background-color: rgb(255, 255, 255, 0.3);
-    line-height: 70px;
-    margin-top: 0px;
-    font-weight: bolder;
-    font-size: 1.3em;
-    border-radius: 5px
-}
-div.imgsprite div.img1:hover div, div.imgsprite div.img2:hover div, div.imgsprite div.img3:hover div {
-    background-color: #fff;
-    opacity: 0.8;
-}
-
-section div.todoEnUno {
-    margin: 30px auto;
-    height: 835px;
-    width: 950px;
-    text-align: center;
-    background-color: #014f23;
-    padding: 0;
-}
-section div.conten1 div {
-    height: 250px;
-    width: 900px;
-    display: inline-block;
-    margin: 20px auto;
-    background-color: #fff;
-    margin-bottom: 20px;
-    padding: 5px;
-}
-section div.conten1 div.logoleft1 {
-    height: 72px;
-    width: 82px;
-    display: inline-block;
-    background-image: url("imgs/spriteweb.png");
-    background-position: 508px -501px;
-    margin-right: 10px;
-    z-index: 5;
-    position: relative;
-    top: -54px;
-    left: -18px
-}
-section div.conten1 div.parrafo1 {
-    width: 538px;
-    height: 160px;
-    display: inline-block;
-    z-index: 5;
-    top: -32px;
-    position: relative;
-    left: 0px;
-    margin-left: 10px;
-    margin-right: 10px;
-}
-section div.conten1 div.logorigth1 {
-    height: 160px;
-    width: 120px;
-    display: inline-block;
-    background-image: url("imgs/spriteweb.png");
-    background-position: -80px -213px;
-    margin-left: 10px;
-    position: relative;
-    z-index: 5;
-    top: 0px;
-    left: 27px
-}
-section div.conten1 div:hover {
-    color: green
-}
-
-section div.conten2 {
-    margin: 5px auto;
-    height: 300px;
-    width: 950px;
-    text-align: center;
-    background-color: #014f23;
-    padding: 0;
-}
-section div.conten2 {
-    height: 250px;
-    width: 900px;
-    display: inline-block;
-    margin: -8px auto;
-    background-color: #fff;
-    margin-bottom: 20px;
-    padding: 5px;
-}
-section div.conten2 div div.logoleft2 {
-    height: 72px;
-    width: 82px;
-    display: inline-block;
-    background-image: url("imgs/spriteweb.png");
-    background-position: 508px -501px;
-    margin-right: 10px;
-    z-index: 5;
-    position: relative;
-    top: -32px;
-    left: -12px;
-    padding: 5px;
-}
-section div.conten2 div.parrafo2 {
-    width: 538px;
-    height: 160px;
-    display: inline-block;
-    z-index: 5;
-    top: 30px;
-    position: relative;
-    left: -3px;
-    margin-left: 10px;
-    margin-right: 10px;
-    padding: 10px;
-}
-section div.conten2 div.logoright2 {
-    height: 160px;
-    width: 120px;
-    display: inline-block;
-    background-image: url("imgs/spriteweb.png");
-    background-position: -80px -213px;
-    margin-left: 10px;
-    position: relative;
-    z-index: 5;
-    top: 29px;
-    left: 21px
-}
-section div.conten2:hover {
-    color: green
-}
-
-section div.conten3 {
-    margin: 5px auto;
-    height: 300px;
-    width: 948px;
-    text-align: center;
-    background-color: #014f23;
-    padding: 0;
-}
-section div.conten3 {
-    height: 240px;
-    width: 900px;
-    display: inline-block;
-    margin: -8px auto;
-    background-color: #fff;
-    margin-bottom: 20px;
-    padding: 5px;
-}
-section div.conten3 div div.logolefth3 {
-    height: 72px;
-    width: 82px;
-    display: inline-block;
-    background-image: url("imgs/spriteweb.png");
-    background-position: 508px -501px;
-    margin-right: 10px;
-    z-index: 5;
-    position: relative;
-    top: -32px;
-    left: -12px;
-    padding: 5px;
-}
-section div.conten3 div.parrafo3 {
-    width: 538px;
-    height: 160px;
-    display: inline-block;
-    z-index: 5;
-    top: 15px;
-    position: relative;
-    left: -3px;
-    margin-left: 10px;
-    margin-right: 10px;
-    padding: 10px;
-}
-section div.conten3 div.logorigth3 {
-    height: 160px;
-    width: 120px;
-    display: inline-block;
-    background-image: url("imgs/spriteweb.png");
-    background-position: -80px -213px;
-    margin-left: 10px;
-    position: relative;
-    z-index: 5;
-    top: 29px;
-    left: 21px
-}
-section div.conten3:hover {
-    color: green
-}
-
-footer {
-    text-align: center;
-    padding: 2px;
-}
-footer div.footer {
-    width: 950px;
-    height: 260px;
-    text-align: center;
-    background-color: #fff;
-    margin: 15px auto;
-}
-footer div.log_inf {
-    width: 250px;
-    height: 175px;
-    background-image: url("imgs/spriteweb.png");
-    background-position: 292px -429px;
-    position: relative;
-    top: 4px;
-    left: 379px;
-}
-footer ul {
-    list-style: none;
-    text-align: center;
-}
-footer ul li {
-    margin: 10px auto;
-    padding: 10px;
-    text-align: center;
-}
-footer ul li {
-    display: inline-block;
-}
-footer ul li a:link, footer ul li a:visited {
-    text-decoration: none;
-    color: #000;
-    margin: auto -1px;
-    width: 150px;
-    padding: 5px;
-    display: block;
-}
-footer ul li a:hover {
-    border-bottom: 3px solid #014f23
-}
+            * {}
+            body {
+                margin: 5px;
+                padding: 0;
+            }
+            main {
+                margin: 10px auto;
+                height: auto;
+                position: relative;
+                background-color: rgb(22, 160, 84);
+                font-family: Arial;
+            }
+            header div.Logo {
+                margin: 10px auto;
+                height: 190px;
+                width: 190px;
+                background-color: #07a314;
+                background-image: url("imgs/spriteweb.png");
+                background-position: -10px 800px;
+            }
+            header div.lista nav ul li {
+                margin: 10px auto;
+                width: 148px;
+                margin-right: 16px;
+                padding: 10px;
+                text-align: center;
+            }
+            header div.lista nav ul {
+                list-style: none;
+                text-align: center;
+            }
+            header div.lista nav ul li {
+                border-bottom: 2px solid #fff;
+                background-color: #014f23;
+                display: inline-block;
+            }
+            header div.lista nav ul li a:link, header div.lista nav ul li a:visited {
+                text-decoration: none;
+                color: #fff;
+                margin: 5px;
+                padding: 5px;
+                display: block;
+            }
+            header div.lista nav ul li:hover {
+                border-bottom: 2px solid #d3d609;
+                background-color: #013819;
+            }
+            div.imgsprite {
+                margin: 10px auto;
+                height: 230px auto;
+                width: 940px;
+                padding: 5px;
+                background-color: #014f23;
+                text-align: center;
+            }
+            div.imgsprite div.img1, div.img2, div.img3 {
+                border: 2px solid #fff;
+                margin: 10px auto;
+                height: 200px;
+                width: 290px;
+                display: inline-block;
+                background-image: url("imgs/spriteweb.png");
+                background-position: -1272px -7px;
+                border-radius: 3px
+            }
+            div.imgsprite div.img1 {
+                margin-right: 5px
+            }
+            div.imgsprite div.img2 {
+                margin-right: 5px;
+                margin-left: 5px;
+            }
+            div.imgsprite div.img3 {
+                margin-left: 5px
+            }
+            div.imgsprite div.img1 div, div.imgsprite div.img2 div, div.imgsprite div.img3 div {
+                background-color: rgba(255, 225, 225, 0.3);
+                height: 70px;
+                border-radius: 3px
+            }
+            div.imgsprite div.img1 div p, div.imgsprite div.img2 div p, div.imgsprite div.img3 div p {
+                background-color: rgb(255, 255, 255, 0.3);
+                line-height: 70px;
+                margin-top: 0px;
+                font-weight: bolder;
+                font-size: 1.3em;
+                border-radius: 5px
+            }
+            div.imgsprite div.img1:hover div, div.imgsprite div.img2:hover div, div.imgsprite div.img3:hover div {
+                background-color: #fff;
+                opacity: 0.8;
+            }
+            section div.todoEnUno {
+                margin: 30px auto;
+                height: 835px;
+                width: 950px;
+                text-align: center;
+                background-color: #014f23;
+                padding: 0;
+            }
+            section div.conten1 div {
+                height: 250px;
+                width: 900px;
+                display: inline-block;
+                margin: 20px auto;
+                background-color: #fff;
+                margin-bottom: 20px;
+                padding: 5px;
+            }
+            section div.conten1 div.logoleft1 {
+                height: 72px;
+                width: 82px;
+                display: inline-block;
+                background-image: url("imgs/spriteweb.png");
+                background-position: 508px -501px;
+                margin-right: 10px;
+                z-index: 5;
+                position: relative;
+                top: -54px;
+                left: -18px
+            }
+            section div.conten1 div.parrafo1 {
+                width: 538px;
+                height: 160px;
+                display: inline-block;
+                z-index: 5;
+                top: -32px;
+                position: relative;
+                left: 0px;
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+            section div.conten1 div.logorigth1 {
+                height: 160px;
+                width: 120px;
+                display: inline-block;
+                background-image: url("imgs/spriteweb.png");
+                background-position: -80px -213px;
+                margin-left: 10px;
+                position: relative;
+                z-index: 5;
+                top: 0px;
+                left: 27px
+            }
+            section div.conten1 div:hover {
+                color: green
+            }
+            section div.conten2 {
+                margin: 5px auto;
+                height: 300px;
+                width: 950px;
+                text-align: center;
+                background-color: #014f23;
+                padding: 0;
+            }
+            section div.conten2 {
+                height: 250px;
+                width: 900px;
+                display: inline-block;
+                margin: -8px auto;
+                background-color: #fff;
+                margin-bottom: 20px;
+                padding: 5px;
+            }
+            section div.conten2 div div.logoleft2 {
+                height: 72px;
+                width: 82px;
+                display: inline-block;
+                background-image: url("imgs/spriteweb.png");
+                background-position: 508px -501px;
+                margin-right: 10px;
+                z-index: 5;
+                position: relative;
+                top: -32px;
+                left: -12px;
+                padding: 5px;
+            }
+            section div.conten2 div.parrafo2 {
+                width: 538px;
+                height: 160px;
+                display: inline-block;
+                z-index: 5;
+                top: 30px;
+                position: relative;
+                left: -3px;
+                margin-left: 10px;
+                margin-right: 10px;
+                padding: 10px;
+            }
+            section div.conten2 div.logoright2 {
+                height: 160px;
+                width: 120px;
+                display: inline-block;
+                background-image: url("imgs/spriteweb.png");
+                background-position: -80px -213px;
+                margin-left: 10px;
+                position: relative;
+                z-index: 5;
+                top: 29px;
+                left: 21px
+            }
+            section div.conten2:hover {
+                color: green
+            }
+            section div.conten3 {
+                margin: 5px auto;
+                height: 300px;
+                width: 948px;
+                text-align: center;
+                background-color: #014f23;
+                padding: 0;
+            }
+            section div.conten3 {
+                height: 240px;
+                width: 900px;
+                display: inline-block;
+                margin: -8px auto;
+                background-color: #fff;
+                margin-bottom: 20px;
+                padding: 5px;
+            }
+            section div.conten3 div div.logolefth3 {
+                height: 72px;
+                width: 82px;
+                display: inline-block;
+                background-image: url("imgs/spriteweb.png");
+                background-position: 508px -501px;
+                margin-right: 10px;
+                z-index: 5;
+                position: relative;
+                top: -32px;
+                left: -12px;
+                padding: 5px;
+            }
+            section div.conten3 div.parrafo3 {
+                width: 538px;
+                height: 160px;
+                display: inline-block;
+                z-index: 5;
+                top: 15px;
+                position: relative;
+                left: -3px;
+                margin-left: 10px;
+                margin-right: 10px;
+                padding: 10px;
+            }
+            section div.conten3 div.logorigth3 {
+                height: 160px;
+                width: 120px;
+                display: inline-block;
+                background-image: url("imgs/spriteweb.png");
+                background-position: -80px -213px;
+                margin-left: 10px;
+                position: relative;
+                z-index: 5;
+                top: 29px;
+                left: 21px
+            }
+            section div.conten3:hover {
+                color: green
+            }
+            footer {
+                text-align: center;
+                padding: 2px;
+            }
+            footer div.footer {
+                width: 950px;
+                height: 260px;
+                text-align: center;
+                background-color: #fff;
+                margin: 15px auto;
+            }
+            footer div.log_inf {
+                width: 250px;
+                height: 175px;
+                background-image: url("imgs/spriteweb.png");
+                background-position: 292px -429px;
+                position: relative;
+                top: 4px;
+                left: 379px;
+            }
+            footer ul {
+                list-style: none;
+                text-align: center;
+            }
+            footer ul li {
+                margin: 10px auto;
+                padding: 10px;
+                text-align: center;
+            }
+            footer ul li {
+                display: inline-block;
+            }
+            footer ul li a:link, footer ul li a:visited {
+                text-decoration: none;
+                color: #000;
+                margin: auto -1px;
+                width: 150px;
+                padding: 5px;
+                display: block;
+            }
+            footer ul li a:hover {
+                border-bottom: 3px solid #014f23
+            }
         </style>
     </head>
-    <body>
-        <main>
-            <header>
-                <div class="Logo">
-                </div>
-                <div class="lista">
-                    <nav>
-                        <ul>
-                            <li>
-                                <a href="">
-                                    INICIO
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    NOSOTROS
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    PORTAFOLIO
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    SERVICIOS
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    CONTACTO
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-                .
-                <div class="imgsprite">
-                    <div class="img1">
-                        <div>
-                            <p>
-                                Sprite 1
-                            </p>
-                        </div>
-                    </div>
-                    <div class="img2">
-                        <div>
-                            <p>
-                                Sprite 2
-                            </p>
-                        </div>
-                    </div>
-                    <div class="img3">
-                        <div>
-                            <p>
-                                Sprite 3
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </header>
-            <section>
-                <div class="todoEnUno">
-                    <div class="conten1">
-                        <div>
-                            <div class="logoleft1">
-                            </div>
-                            <div class="parrafo1">
-                                <p>
-                                    Lorem ipsum, dolor sit, amet consectetur adipisicing elit. Dolores repellendus est, id delectus doloremque deleniti, accusantium vero perspiciatis ullam autem laborum eos accusamus porro sequi dignissimos, nisi vel molestias earum laudantium quibusdam voluptatum quae iure cumque. Iusto velit facilis molestias, necessitatibus aliquam minima, similique, ad numquam suscipit eveniet doloribus aliquid officia, molestiae voluptatum ut. Sunt et voluptates impedit, consequuntur placeat? Hic quibusdam reprehenderit at impedit, iure fugiat praesentium possimus non!
-                                </p>
-                            </div>
-                            <div class="logorigth1">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="conten2">
-                        <div>
-                            <div class="logoleft2">
-                            </div>
-                            <div class="parrafo2">
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque dolor architecto tempora ipsum magnam eum consequuntur sit exercitationem hic, iusto assumenda corporis voluptatibus, corrupti tenetur quibusdam, impedit dolores distinctio eaque earum libero. Magnam officia nostrum quasi, consequuntur. Libero magni iste accusamus veniam reprehenderit totam sed non, rerum quisquam alias quibusdam dicta quis eveniet debitis quidem eos. Eveniet debitis accusamus quisquam ipsum, autem ex harum libero dicta sequi iste ab exercitationem.
-                                </p>
-                            </div>
-                            <div class="logoright2">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="conten3">
-                        <div>
-                            <div class="logolefth3">
-                            </div>
-                            <div class="parrafo3">
-                                <p>
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum consectetur blanditiis provident earum et, rem impedit itaque, explicabo sit inventore tempore eos quo necessitatibus odit fugiat obcaecati quibusdam aut? Vero repellendus commodi aliquam aut saepe expedita animi deserunt, in, repellat dolorem dicta ipsam cumque quas, illo sit, eius rem officiis. Facere neque tempora eligendi repellat quis, doloribus possimus veniam quisquam iusto saepe dolorum repudiandae quidem suscipit eius ipsum qui dolore!
-                                </p>
-                            </div>
-                            <div class="logorigth3">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <footer>
-                <div class="footer">
-                    <div class="log_inf;">
-                    </div>
+</html>
+<body>
+    <main>
+        <header>
+            <div class="Logo">
+            </div>
+            <div class="lista">
+                <nav>
                     <ul>
                         <li>
                             <a href="">
@@ -458,8 +350,108 @@ footer ul li a:hover {
                             </a>
                         </li>
                     </ul>
+                </nav>
+            </div>
+            .
+            <div class="imgsprite">
+                <div class="img1">
+                    <div>
+                        <p>
+                            Sprite 1
+                        </p>
+                    </div>
                 </div>
-            </footer>
-        </main>
-    </body>
-</html>
+                <div class="img2">
+                    <div>
+                        <p>
+                            Sprite 2
+                        </p>
+                    </div>
+                </div>
+                <div class="img3">
+                    <div>
+                        <p>
+                            Sprite 3
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section>
+            <div class="todoEnUno">
+                <div class="conten1">
+                    <div>
+                        <div class="logoleft1">
+                        </div>
+                        <div class="parrafo1">
+                            <p>
+                                Lorem ipsum, dolor sit, amet consectetur adipisicing elit. Dolores repellendus est, id delectus doloremque deleniti, accusantium vero perspiciatis ullam autem laborum eos accusamus porro sequi dignissimos, nisi vel molestias earum laudantium quibusdam voluptatum quae iure cumque. Iusto velit facilis molestias, necessitatibus aliquam minima, similique, ad numquam suscipit eveniet doloribus aliquid officia, molestiae voluptatum ut. Sunt et voluptates impedit, consequuntur placeat? Hic quibusdam reprehenderit at impedit, iure fugiat praesentium possimus non!
+                            </p>
+                        </div>
+                        <div class="logorigth1">
+                        </div>
+                    </div>
+                </div>
+                <div class="conten2">
+                    <div>
+                        <div class="logoleft2">
+                        </div>
+                        <div class="parrafo2">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque dolor architecto tempora ipsum magnam eum consequuntur sit exercitationem hic, iusto assumenda corporis voluptatibus, corrupti tenetur quibusdam, impedit dolores distinctio eaque earum libero. Magnam officia nostrum quasi, consequuntur. Libero magni iste accusamus veniam reprehenderit totam sed non, rerum quisquam alias quibusdam dicta quis eveniet debitis quidem eos. Eveniet debitis accusamus quisquam ipsum, autem ex harum libero dicta sequi iste ab exercitationem.
+                            </p>
+                        </div>
+                        <div class="logoright2">
+                        </div>
+                    </div>
+                </div>
+                <div class="conten3">
+                    <div>
+                        <div class="logolefth3">
+                        </div>
+                        <div class="parrafo3">
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum consectetur blanditiis provident earum et, rem impedit itaque, explicabo sit inventore tempore eos quo necessitatibus odit fugiat obcaecati quibusdam aut? Vero repellendus commodi aliquam aut saepe expedita animi deserunt, in, repellat dolorem dicta ipsam cumque quas, illo sit, eius rem officiis. Facere neque tempora eligendi repellat quis, doloribus possimus veniam quisquam iusto saepe dolorum repudiandae quidem suscipit eius ipsum qui dolore!
+                            </p>
+                        </div>
+                        <div class="logorigth3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="footer">
+                <div class="log_inf">
+                </div>
+                <ul>
+                    <li>
+                        <a href="">
+                            INICIO
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            NOSOTROS
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            PORTAFOLIO
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            SERVICIOS
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            CONTACTO
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </main>
+</body>
