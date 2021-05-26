@@ -1,0 +1,231 @@
+* {
+    transition: all 1s ease-out;
+}
+div.logoTatto {
+    margin: 10px auto;
+    background: url(../imgs/Challenge_responsive/tattoo-banner-moon.jpg) no-repeat center;
+    width: 200px;
+    height: 200px;
+    background-size: contain;
+    transform: scale(.7);
+}
+@media (min-width: 720px) {
+    div.logoTatto {
+        transform: scale(.9)
+    }
+}
+@media (min-width: 1024px) {
+    div.logoTatto {
+        transform: scale(1)
+    }
+}
+div.images div.arm1 {
+    margin: 20px auto;
+    width: 212px;
+    height: 238px;
+    background: url(../imgs/Challenge_responsive/tatto-arm.jpg) no-repeat center;
+    background-size: contain;
+    text-align: center;
+    position: relative;
+    border-radius: 5px;
+}
+div.images div.arm2 {
+    margin: 20px auto;
+    width: 212px;
+    height: 238px;
+    background: url(../imgs/Challenge_responsive/tatto-arm2.jpg) no-repeat center;
+    background-size: contain;
+    text-align: center;
+    position: relative;
+    border-radius: 5px;
+}
+div.images div.arm3 {
+    margin: 20px auto;
+    width: 212px;
+    height: 238px;
+    background: url(../imgs/Challenge_responsive/tatto-arm3.jpg) no-repeat center;
+    background-size: contain;
+    text-align: center;
+    position: relative;
+    border-radius: 5px;
+}
+div.images div.arm4 {
+    margin: 20px auto;
+    width: 212px;
+    height: 238px;
+    background: url(../imgs/Challenge_responsive/tatto-arm4.jpg) no-repeat center;
+    background-size: contain;
+    text-align: center;
+    position: relative;
+    border-radius: 5px;
+}
+div.images div.boxheader {
+    height: 51px;
+    z-index: 1;
+    margin-top: 248px;
+    background-color: #fff;
+    opacity: .8;
+    position: absolute;
+    display: inline-block;
+    text-align: center;
+    margin: 187px -101px;
+    width: 201px;
+}
+div.images div.boxheader a {
+    text-decoration: none;
+    color: #000;
+    line-height: 3em;
+    z-index: 2;
+}
+div.images div.boxheader:hover {
+    transition: all 1s ease-in;
+    height: 75px;
+    margin-top: 179px;
+    line-height: 4em;
+}
+@media (min-width: 720px) {
+    div.images div.arm1, div.images div.arm2, div.images div.arm3, div.images div.arm4 {
+        display: inline-block;
+        margin: 10px 69px;
+        text-align: center;
+        margin-top: 100px
+    }
+}
+@media (min-width: 1024px) {
+    div.images div.arm1, div.images div.arm2, div.images div.arm3, div.images div.arm4 {
+        display: inline-block;
+        margin: 10px 18px;
+        text-align: center;
+        position: relative;
+        margin-top: 100px;
+    }
+}
+@media (min-width: 1300px) {
+    div.images {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    div.images div.arm1, div.images div.arm2, div.images div.arm3, div.images div.arm4 {
+        display: inline-block;
+        margin: 10px 50px;
+        text-align: center;
+        position: relative;
+    }
+    div.images div.boxheader:hover {
+        transition: all .5s ease-in;
+        height: 100px;
+        line-height: 4em;
+    }
+}
+/***********************************************************************************/
+
+div.section {
+    margin: 20px auto;
+    display: block;
+    font-family: Arial;
+    text-align: center;
+}
+div.section div.groupOne div.box div.logo {
+    margin: 20px auto;
+    border: 1px solid #000;
+    width: 200px;
+    height: 300px;
+    background: url(../imgs/Challenge_responsive/heart-tatto.jpg) no-repeat center;
+    background-size: contain;
+    text-align: center;
+    position: relative;
+    border-radius: 5px;
+}
+div.section div.groupOne div.box div.text h1 {
+    text-align: center;
+}
+div.section div.groupOne div.box div.text p {
+    text-align: center;
+}
+@media (min-width: 720px) {
+    div.section div.groupOne div.box div.logo {
+        text-align: left;
+        display: inline-block;
+    }
+    div.section div.groupOne div.box div.text {
+        height: 300px;
+        width: 407px;
+        float: right;
+        display: inline-block;
+    }
+}
+@media (min-width: 1024px) {
+    div.section div.groupOne div.box div.text {
+        height: 300px;
+        width: 750px;
+        text-align: left;
+        display: inline-block;
+    }
+}
+@media (min-width: 1300px) {
+    div.section div.groupOne div.box div.logo {
+        text-align: left;
+        display: inline-block;
+        margin-left: 55px;
+    }
+    div.section div.groupOne div.box div.text {
+        height: 300px;
+        width: 842px;
+        margin-right: 55px;
+        float: right;
+        text-align: right;
+        display: inline-block;
+    }
+}
+div.groupTwo div.box div.logo {
+    margin: 20px auto;
+    /*border: 1px solid #000;*/
+    width: 200px;
+    height: 300px;
+    background: url(../imgs/Challenge_responsive/heart-tatto2.jpg) no-repeat center;
+    background-size: contain;
+    text-align: center;
+    position: relative;
+    border-radius: 5px;
+}
+div.section div.groupTwo div.box div.text h1 {
+    text-align: center;
+}
+div.section div.groupTwo div.box div.text p {
+    text-align: center;
+}
+@media (min-width: 720px) {
+    div.section div.groupTwo div.box div.logo {
+        text-align: left;
+        display: inline-block;
+    }
+    div.section div.groupTwo div.box div.text {
+        height: 300px;
+        width: 407px;
+        float: right;
+        display: inline-block;
+    }
+}
+@media (min-width: 1024px) {
+    div.section div.groupTwo div.box div.text {
+        height: 300px;
+        width: 750px;
+        text-align: left;
+        display: inline-block;
+    }
+}
+@media (min-width: 1300px) {
+    div.section div.groupTwo div.box div.logo {
+        text-align: left;
+        display: inline-block;
+        margin-left: 55px;
+    }
+    div.section div.groupTwo div.box div.text {
+        height: 300px;
+        width: 842px;
+        margin-right: 55px;
+        float: right;
+        text-align: right;
+        display: inline-block;
+    }
+}
