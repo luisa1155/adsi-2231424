@@ -4,20 +4,435 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Challenge Calculator JS</title>
+    <title>Challenge Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        
+        div.calculator {
+            background: url(imgs/modo-light.jpg) no-repeat center;
+            height: 736px;
+            margin: 0 auto 40px auto;
+            position: relative;
+            transition: all 0.5s ease-out;
+            width: 414px;
+        }
+        
+
+        div.calculator nav.mode {
+            left: 148px;
+            position: absolute;
+            top: 22px;
+            width: 120px;
+        }
+        div.calculator nav.mode a {
+            display: inline-block;
+            height: 40px;
+            transition: transform 0.2s ease-in;
+            width: 60px;
+        }
+        div.calculator nav.mode a#dark:hover {
+            transform: scale(1.04) translateX(2px);
+        }
+        div.calculator nav.mode a#light:hover {
+            transform: scale(1.04) translateX(-2px);
+        }
+        div.calculator nav.mode a:last-child {
+            margin-left: -5px;
+        }
+        div.calculator nav.mode a#light {
+            background: url(imgs/number-light\ mode.jpg) no-repeat center;
+        }
+        div.calculator nav.mode a#dark {
+            background: url(imgs/number-dark\ cambio\ de\ modo.jpg) no-repeat center;
+        }
+       
+        div.calculator div.display {
+            font-family: Roboto;
+            position: absolute;
+            top: 130px;
+            text-align: right;
+            right: 20px;
+            width: 300px;
+        }
+        div.calculator div.display p#operation {
+            color: #3f5f36;
+            font-weight: 300;
+            font-size: 18px;
+            margin: 0;
+        }
+        div.calculator div.display h4#answer {
+            color: #fff;
+            font-weight: 400;
+            font-size: 64px;
+            opacity: 0.8;
+            margin: 0;
+        }
+        
+        div.calculator nav.buttons {
+            left: 20px;
+            position: absolute;
+            top: 250px;
+            width: 377px;
+        }
+        div.calculator nav.buttons ul::selection {
+            background-color: transparent;
+        }
+        div.calculator nav.buttons ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        div.calculator nav.buttons ul li {
+            background-color: green;
+            display: inline-block;
+            height: 86px;
+            margin: 0px 6px 5px 0px;
+            opacity: 0.8;
+            transition: transform 0.2s ease-in;
+            width: 86px;
+        }
+        div.calculator nav.buttons ul li:hover {
+            cursor: pointer;
+            transform: scale(1.1);
+            opacity: 1;
+        }
+        div.calculator nav.buttons ul li:nth-child(4n) {
+            margin-right: 0;
+        }
+        div.calculator nav.buttons ul li#bt-clear {
+            background: url(imgs/modo-light.jpg) no-repeat center;
+        }
+        div.calculator nav.buttons ul li#bt-bs {
+            background: url(imgs/number-light\ borarr.jpg) no-repeat center;
+        }
+        div.calculator nav.buttons ul li#bt-div {
+            background: url(imgs/number-light\ div.jpg) no-repeat center;
+        }
+        div.calculator nav.buttons ul li#bt-1 {
+            background: url(imgs/number-light\ 1.jpg) no-repeat center;
+        }
+        div.calculator nav.buttons ul li#bt-2 {
+            background: url(imgs/number-light\ 2.jpg) no-repeat center;
+        }
+        div.calculator nav.buttons ul li#bt-3 {
+            background: url(imgs/number-light\ 3.jpg) no-repeat center;
+        }
+        div.calculator nav.buttons ul li#bt-prod {
+            background: url(imgs/number-lightx.jpg) no-repeat center;
+        }
+        div.calculator nav.buttons ul li#bt-4 {
+            background: url(imgs/number-light\ 4.jpg) no-repeat center;
+        }
+        div.calculator nav.buttons ul li#bt-5 {
+            background: url(imgs/number-light\ 5.jpg) no-repeat center;
+        }
+        div.calculator nav.buttons ul li#bt-6 {
+            background: url(imgs/number-light\ 6.jpg) no-repeat center;
+        }
+        div.calculator nav.buttons ul li#bt-subs {
+            background: url(imgs/number-light-.jpg) no-repeat center;
+        }
+        div.calculator nav.buttons ul li#bt-7 {
+            background: url(imgs/number-light\ 7.jpg) no-repeat center;
+        }
+        div.calculator nav.buttons ul li#bt-8 {
+            background: url(imgs/number-light\ 8.jpg) no-repeat center;
+        }
+        div.calculator nav.buttons ul li#bt-9 {
+            background: url(imgs/number-light9.jpg) no-repeat center;
+        }
+        div.calculator nav.buttons ul li#bt-add {
+            background: url(imgs/number-light+.jpg) no-repeat center;
+        }
+        div.calculator nav.buttons ul li#bt-per {
+            background: url(imgs/number-light%.jpg) no-repeat center;
+        }
+        div.calculator nav.buttons ul li#bt-0 {
+            background: url(imgs/number-light\ 0.jpg) no-repeat center;
+        }
+        div.calculator nav.buttons ul li#bt-dot {
+            background: url(imgs/number-light\ p.decimal.jpg) no-repeat center;
+        }
+        div.calculator nav.buttons ul li#bt-equal {
+            background: url(imgs/number-light=.jpg) no-repeat center;
+        }
+        /* Mode (light/dark) - - - - - - - - - - - - - - - - - - - - */
+        div.calculator.dark {
+            background: url(imgs/modo-dark.jpg) no-repeat center;
+        }
+        div.calculator.dark nav.mode a#light {
+            background: url(imgs/number-dark\ cambio\ de\ modo.jpg) no-repeat center;
+        }
+        div.calculator.dark nav.mode a#dark {
+            background: url(imgs/number-light\ mode.jpg) no-repeat center;
+        }
+        div.calculator.dark div.display p#operation {
+            color: #d5eddf;
+        }
+        div.calculator.dark div.display h4#answer {
+            color: #000;
+            opacity: 0.6;
+        }
+        div.calculator.dark nav.buttons ul li#bt-clear {
+            background: url(imgs/number-dark\ borrar\ todo.jpg) no-repeat center;
+        }
+        div.calculator.dark nav.buttons ul li#bt-bs {
+            background: url(imgs/number-dark\ eliminar.jpg) no-repeat center;
+        }
+        div.calculator.dark nav.buttons ul li#bt-div {
+            background: url(imgs/number-dark\ \ division.jpg) no-repeat center;
+        }
+        div.calculator.dark nav.buttons ul li#bt-1 {
+            background: url(imgs/number-dark\ 1.jpg) no-repeat center;
+        }
+        div.calculator.dark nav.buttons ul li#bt-2 {
+            background: url(imgs/number-dark\ 2.jpg) no-repeat center;
+        }
+        div.calculator.dark nav.buttons ul li#bt-3 {
+            background: url(imgs/number-dark\ 3.jpg) no-repeat center;
+        }
+        div.calculator.dark nav.buttons ul li#bt-prod {
+            background: url(imgs/number-dark\ multiplicacion.jpg) no-repeat center;
+        }
+        div.calculator.dark nav.buttons ul li#bt-4 {
+            background: url(imgs/number-dark\ 4.jpg) no-repeat center;
+        }
+        div.calculator.dark nav.buttons ul li#bt-5 {
+            background: url(imgs/number-dark\ 5.jpg) no-repeat center;
+        }
+        div.calculator.dark nav.buttons ul li#bt-6 {
+            background: url(imgs/number-dark\ 6.jpg) no-repeat center;
+        }
+        div.calculator.dark nav.buttons ul li#bt-subs {
+            background: url(imgs/number-dark\ menos.jpg) no-repeat center;
+        }
+        div.calculator.dark nav.buttons ul li#bt-7 {
+            background: url(imgs/number-dark\ 7.jpg) no-repeat center;
+        }
+        div.calculator.dark nav.buttons ul li#bt-8 {
+            background: url(imgs/number-dark\ 8.jpg) no-repeat center;
+        }
+        div.calculator.dark nav.buttons ul li#bt-9 {
+            background: url(imgs/number-dark\ 9.jpg) no-repeat center;
+        }
+        div.calculator.dark nav.buttons ul li#bt-add {
+            background: url(imgs/number-dark\ suma.jpg) no-repeat center;
+        }
+        div.calculator.dark nav.buttons ul li#bt-per {
+            background: url(imgs/number-dark\ porcentaje.jpg) no-repeat center;
+        }
+        div.calculator.dark nav.buttons ul li#bt-0 {
+            background: url(imgs/number-dark\ 0.jpg) no-repeat center;
+        }
+        div.calculator.dark nav.buttons ul li#bt-dot {
+            background: url(imgs/number-dark\ punto.jpg) no-repeat center;
+        }
+        div.calculator.dark nav.buttons ul li#bt-equal {
+            background: url(imgs/number-dark\ igual.jpg) no-repeat center;
+        }
+
+    </style>
 </head>
 <body>
     <main>
         <header>
-            <h1> <span><a href="index.html">&larr;</a></span> Challenge Calculator JS</h1>
+            <h1> <span><a href="index.html">&larr;</a></span> Challenge Calculator </h1>
         </header>
         <section>
-  
+            <div class="calculator">
+                <nav class="mode">
+                    <a href="javascript:;" id="light"></a>
+                    <a href="javascript:;" id="dark"></a>
+                </nav>
+                <div class="display">
+                    <p id="operation"></p>
+                    <h4 id="answer"></h4>
+                </div>
+                <nav class="buttons">
+                    <ul>
+                        <li id="bt-clear"></li>
+                        <li id="bt-bs"></li>
+                        <li id="bt-pow"></li>
+                        <li id="bt-div"></li>
+                        <li id="bt-1"></li>
+                        <li id="bt-2"></li>
+                        <li id="bt-3"></li>
+                        <li id="bt-prod"></li>
+                        <li id="bt-4"></li>
+                        <li id="bt-5"></li>
+                        <li id="bt-6"></li>
+                        <li id="bt-subs"></li>
+                        <li id="bt-7"></li>
+                        <li id="bt-8"></li>
+                        <li id="bt-9"></li>
+                        <li id="bt-add"></li>
+                        <li id="bt-per"></li>
+                        <li id="bt-0"></li>
+                        <li id="bt-dot"></li>
+                        <li id="bt-equal"></li>     
+                    </ul>
+                </nav>
+            </div>
         </section>
     </main>
 
     <script>
+        
+        //Declarar variables
+	var operandoa;
+		var operandob;
+		var operacion;
+		// Variables & Constants - - - - - - - - - - - - - - - -
+		var nchars    = 0;
+		var operation = document.getElementById('operation');
+		var anwser    = document.getElementById('anwser');
+
+		const skin  = document.querySelector('div.calculator');
+		const light = document.getElementById('light');
+		const dark  = document.getElementById('dark');
+
+		// Variables
+		const uno = document.getElementById('bt-1');
+		const dos = document.getElementById('bt-2');
+		const tres = document.getElementById('bt-3');
+		const cuatro = document.getElementById('bt-4');
+		const cinco = document.getElementById('bt-5');
+		const seis = document.getElementById('bt-6');
+		const siete = document.getElementById('bt-7');
+		const ocho = document.getElementById('bt-8');
+		const nueve = document.getElementById('bt-9');
+		const cero = document.getElementById('bt-0');
+
+		const reset = document.getElementById('bt-clear');
+		const borrar = document.getElementById('bt-bs');
+		const suma = document.getElementById('bt-add');
+		const resta = document.getElementById('bt-subs');
+		const multiplicacion = document.getElementById('bt-prod');
+		const division = document.getElementById('bt-div');
+		const igual = document.getElementById('bt-equal');
+		const punto = document.getElementById('bt-dot');
+		const modulo = document.getElementById('bt-modulo');
+
+
+		// Events - - - - - - - - - - - - - - - -
+		light.onclick = function() {
+			    skin.classList.remove('dark');
+			}
+		dark.onclick = function() {
+			    skin.classList.add('dark');
+			}
+		function addCharacter(el) {
+			    operation.innerText += el;
+			}
+		//Eventos de click
+		uno.onclick = function(e){
+			    addCharacter("1");
+			}
+		dos.onclick = function(e){
+			    addCharacter("2");
+			}
+		tres.onclick = function(e){
+			    addCharacter("3");
+			}
+		cuatro.onclick = function(e){
+			    addCharacter("4");
+			}
+		cinco.onclick = function(e){
+			    addCharacter("5");
+			}
+		seis.onclick = function(e){
+			    addCharacter("6");
+			}
+		siete.onclick = function(e){
+			    addCharacter("7");
+			}
+		ocho.onclick = function(e){
+			    addCharacter("8");
+			}
+		nueve.onclick = function(e){
+			    addCharacter("9");
+			}
+		cero.onclick = function(e){
+			    addCharacter("0");
+			}
+		reset.onclick = function(e){
+			    resetear();
+			    answer.innerText = '';
+			}
+		suma.onclick = function(e){
+			    operandoa = operation.innerText;
+			    operador = "+";
+			    limpiar();
+			}
+		resta.onclick = function(e){
+			    operandoa = operation.innerText;
+			    operador = "-";
+			    limpiar();
+			}
+		multiplicacion.onclick = function(e){
+			    operandoa = operation.innerText;
+			    operador = "*";
+			    limpiar();
+			}
+		division.onclick = function(e){
+			    operandoa = operation.innerText;
+			    operador = "/";
+			    limpiar();
+			}
+		igual.onclick = function(e){
+			    operandob = operation.innerText;
+			    resolver();
+			    resetear();
+			}
+		punto.onclick = function(e) {
+			    addCharacter(".");
+			}
+		borrar.onclick = function(e) {
+			    answer.innerText = '';
+			}
+		modulo.onclick = function(e) {
+			    operandoa = operation.innerText;
+			    operador = "%";
+			    limpiar();
+			}
+		function limpiar(){
+			    operation.innerText = '';
+			}
+
+		function resetear(){
+			    operation.innerText = '';
+			    operandoa = 0;
+			    operandob = 0;
+			    operacion = "";
+			}
+		function resolver(){
+			    var res = 0;
+			    switch(operador){
+					case "+":
+					    res = parseFloat(operandoa) + parseFloat(operandob);
+					    break;
+
+					case "-":
+					    res = parseFloat(operandoa) - parseFloat(operandob);
+					    break;
+
+					case "*":
+					    res = parseFloat(operandoa) * parseFloat(operandob);
+					    break;
+
+					case "/":
+					    res = parseFloat(operandoa) / parseFloat(operandob);
+					    break;
+					case "%":
+					    res = (parseFloat(operandoa) * parseFloat(operandob)) / 100;
+					    break;
+				    }
+			    resetear();
+			    answer.innerText = res;
+			}
 
     </script>
     
